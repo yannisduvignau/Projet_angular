@@ -1,0 +1,17 @@
+.list-chaudiere {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.home{
+  margin-top: 4vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}

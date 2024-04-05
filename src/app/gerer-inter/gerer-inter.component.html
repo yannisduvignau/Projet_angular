@@ -1,0 +1,30 @@
+<!-- <p>gerer-chaudiere works!</p> -->
+<h2>Consulter les Interventions</h2>
+<a href="creerInter"><button type="button" class="btn_creation">Creer une intervention</button></a>
+
+<div class="containerInter">
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Date</th>
+          <th scope="col">Durée</th>
+          <th scope="col">Description</th>
+          <th scope="col">Chaudiere</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+    <tbody>
+      <ng-container *ngFor="let uneInter of listeInter">
+        <tr>
+            <td>{{ uneInter.id }}</td>
+            <td>{{ uneInter.dateInter | date: 'dd/MM/yyyy'}}</td>
+            <td>{{ uneInter.duree }}</td>
+            <td>{{ uneInter.descriptionInter }}</td>
+            <td>{{ uneInter.numChaudiere }}</td>
+            <td><app-intervention [Intervention]="uneInter"></app-intervention></td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

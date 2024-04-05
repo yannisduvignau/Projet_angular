@@ -1,0 +1,9 @@
+<!-- <p>home works!</p> -->
+<div class="home">
+    <h2>Les chaudières gérées/connues</h2>
+    <div class="list-chaudiere">
+        <ng-container *ngFor="let uneChaudiere of listechaudiere">
+            <app-chaudiere [Chaudiere]="uneChaudiere"></app-chaudiere>
+        </ng-container>
+    </div>
+</div>

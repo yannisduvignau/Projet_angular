@@ -1,0 +1,79 @@
+.navbar {
+    background-color: #ecf0f3e2; /* Couleur de fond */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(180, 180, 180, 0.37);
+    -webkit-backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    border-radius: 50px;
+    /* width: 100%; */
+    z-index: 1000;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+  }
+  
+  .navbar-brand {
+    color: #333; /* Couleur du texte */
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  .navbar-toggler {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 25px;
+    outline: none;
+  }
+
+  button.navbar-toggler:focus,
+  button.navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+  
+  .navbar-toggler span {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.7); /* Couleur de l'icône du bouton de navigation */
+    height: 0.1rem;
+    outline: none;
+    width: 100%;
+  }
+
+  
+  .navbar-collapse {
+    display: none;
+  }
+  
+  .navbar-collapse.show {
+    display: block;
+  }
+  
+  .navbar-nav {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  
+  .nav-link {
+    color: rgba(0, 0, 0, 0.7); /* Couleur du texte */
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    color: rgba(0, 0, 0, 0.9); /* Couleur du texte au survol */
+  }
+  

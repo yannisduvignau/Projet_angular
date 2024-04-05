@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand-md">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">Angu_Chaudiere</a>
+    <button class="navbar-toggler d-md-none" type="button" (click)="toggleNavbar()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="navbar-collapse" [ngClass]="{'show': isNavbarOpen}">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/gererInter">Gérer les interventions</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

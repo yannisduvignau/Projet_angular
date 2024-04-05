@@ -1,0 +1,7 @@
+<!-- <p>intervention works!</p> -->
+<th *ngIf="theInter !== undefined">
+    <a routerLink="/modifierInter/{{theInter.id}}">
+      <mat-icon>edit</mat-icon> <!-- Icône de modification -->
+    </a>
+    <mat-icon (click)="deleteIntervention(theInter.id)">delete</mat-icon> <!-- Icône de suppression -->
+</th>  

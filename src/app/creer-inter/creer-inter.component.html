@@ -1,0 +1,48 @@
+<!-- <p>creer-chaudiere works!</p> -->
+<div class="monForm">
+    <section class="subForm saisieForm">
+        <h2>Création d'une intervention</h2>
+        <form [formGroup]="formulaire" (ngSubmit)="creerIntervention()">
+            <input type="hidden" formControlName="id">
+            <div class="form-group">
+                <label for="dateInter">Date de l'intervention</label>
+                <input type="date" class="form-control" id="dateInter" formControlName="dateInter">
+            </div>
+            <div class="form-group">
+                <label for="descriptionInter">Description</label>
+                <div class="input">
+                    <input type="text" class="form-control" id="descriptionInter" formControlName="descriptionInter"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="duree">Durée</label>
+                <input type="text" class="form-control" id="duree" formControlName="duree">
+            </div>
+            <div class="form-group">
+                <label for="numSerie">Numéro de série de la chaudière</label>
+                <select formControlName="numChaudiere">
+                    <option *ngFor="let chaudiere of chaudiereList" [value]="chaudiere.id">{{ chaudiere.id }}</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]= "formulaire.invalid">Créer l'intervention</button>
+        </form>
+    </section>
+    <section class="subForm visuForm">
+        <h2>Vue de l'intervention</h2>
+        <p>En cours de création ...</p>
+        <ng-container *ngIf="!isEmpty(formulaire.value)">
+            <p><strong>Date :</strong> {{currentInter.dateInter | date: 'dd/MM/yyyy'}}</p>
+            <p><strong>Description :</strong> {{currentInter.descriptionInter}}</p>
+            <p><strong>Durée :</strong> {{currentInter.duree}}</p>
+            <p><strong>Chaudiere:</strong> {{selectedChaudiere.id}}</p>
+            <ng-container *ngIf="!isEmpty(selectedChaudiere.id)">
+            <ul>
+                <li>N° de série : {{selectedChaudiere.numSerie}}</li>
+                <li>Marque / Modele : {{selectedChaudiere.MM}}</li>
+                <li>Adresse du client ({{selectedChaudiere.nomCli}}) : {{selectedChaudiere.adressCli}}</li>
+                <li>Date de mise en service : {{selectedChaudiere.dateMiseEnService | date: 'dd/MM/yyyy'}}</li>
+            </ul>
+            </ng-container>
+        </ng-container>
+    </section>
+</div>
